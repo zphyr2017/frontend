@@ -1,0 +1,577 @@
+<!doctype html>
+<html ng-app="enacApp">
+
+<head>
+	<title>SAPR TRACKER WEB APPLICATION  by Flight Mechanics Lab, University of Bologna</title>
+	
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	
+	<link href="style.css" type="text/css" rel="stylesheet" />	
+	
+	<link rel="icon" href="images/favicon.ico">
+	
+	<script src="script-tags-for-development.js"></script>
+	
+	<!-- JQuery -->
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+ 
+	
+	<script>
+	
+		var app = angular.module('enacApp', ['ngMap']);
+
+		app.controller('appCtrl',["$scope","$interval","NgMap","$http",function($scope,$interval,NgMap,$http) {	
+			
+			var vm = this;
+			var selectedSAPR;
+			
+			NgMap.getMap().then(function(map) {
+				vm.map = map;
+				console.log("Map: ");
+				console.log(map);
+			});			
+			
+			var serverUrlSapr = "http://localhost:3000/sapr/list.json";
+			var saprList;
+			
+			var serverUrlPilots = "http://localhost:3000/saprPilots/?idSapr=";
+			var piltsList;
+			
+			$scope.photoSaprUrl =  "http://mdvlab.altervista.org/enac_v3/tracker/images/sapr/";
+			$scope.photoOperatorUrl =  "http://mdvlab.altervista.org/enac_v3/tracker/images/operators/";
+			
+			var serverUrlSaprFlightPath = "http://localhost:3000/saprFlightPath/?idSapr=";
+			
+			var serverUrlSaprFlightPathInTimePeriod = "http://localhost:3000/saprFlightPathInTimePeriod/?idSapr=";
+			
+			$http.get(serverUrlSapr).then(function(resp) {  
+							saprList = resp.data;
+							$scope.saprList = saprList;
+							console.log("SAPR LIST: ");
+							console.log(saprList);
+							
+				  }, function(err) {
+					console.error('ERR', err);
+					// err.status will contain the status code
+			 }) 
+									
+			
+
+			jQuery('#closeButton').click(function(){
+				jQuery( ".pageLeftContent" ).css( "width", "0px" );
+			});
+			jQuery('#closeConfigureButton').click(function(){
+				jQuery( ".pageRightContent" ).css( "width", "0px" );
+			});
+			jQuery('#configureButton').click(function(){
+				jQuery( ".pageRightContent" ).css( "width", "300px" );
+			});
+
+			$(document).ready(function() {		
+			console.log("ciao");	
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1; //January is 0!
+
+			var yyyy = today.getFullYear();
+			if(dd<10){
+				dd='0'+dd
+			} 
+			if(mm<10){
+				mm='0'+mm
+			} 
+			var today = yyyy + '-' + mm + '-' + dd;
+			
+				var startDate  = document.getElementById("startDate");
+				var stopDate  = document.getElementById("stopDate");			
+				startDate.value =today;
+				stopDate.value  = today;
+				console.log(startDate.value);
+			});
+			
+			$scope.showDetail = function(e, sapr) {
+				jQuery( ".pageLeftContent" ).css( "width", "470px" );			
+				$scope.sapr = sapr;
+				selectedSAPR = sapr;
+				
+				console.log(serverUrlSaprFlightPath+sapr.idSAPR);
+				console.log(sapr);
+				
+				// Get SAPR's Qualified Pilot List
+				$http.get(serverUrlPilots+sapr.idSAPR).then(function(resp) {     		
+											
+											pilotList = resp.data;
+											$scope.pilotList = pilotList;
+											console.log("Pilots LIST: ");
+											console.log(pilotList);
+											
+								  }, function(err) {
+									console.error('ERR', err);
+									// err.status will contain the status code
+							 }); 	
+							 
+				// Get SAPR's Flight Path	
+				// Es: http://localhost:3000/saprFlightPath/?idSapr=2
+ 				
+				$http.get(serverUrlSaprFlightPath+sapr.idSAPR).then(function(resp) {     		
+											
+											flightPath = resp.data;
+											$scope.flightPath = flightPath;
+											console.log("Flight Path: ");
+											console.log(flightPath);
+											$scope.saprPath = [];
+											angular.forEach($scope.flightPath, function(val) {	
+												var pathElement = [val.lat,val.lng];
+												$scope.saprPath.push(pathElement);							
+												console.log(pathElement);
+											})
+											
+								  }, function(err) {
+									console.error('ERR', err);
+									// err.status will contain the status code
+							 }
+				);
+
+													 
+							 
+			};
+			
+			$scope.showPointDetail = function(e,point) {
+				$scope.point = point;
+				console.log(point);
+				var pointID = "P" + $scope.point.idx;
+				console.log(pointID)
+				$scope.map.showInfoWindow('point-iw',pointID);
+			};
+			
+			$scope.findFlightPathInPeriod = function(sapr) {
+				var startDate  = document.getElementById("startDate");
+				var stopDate  = document.getElementById("stopDate");
+				console.log(startDate.value);
+				console.log(stopDate.value);
+				if (startDate.value>stopDate.value) alert("Date error");
+				
+				console.log("findFlightPathInPeriod parameters");
+				console.log(sapr);
+				// Get SAPR's Flight Path
+				// Example  http://localhost:3000/saprFlightPathInTimePeriod/?idSapr=1&startTime=2016-06-02&endTime=2016-06-08
+				var url = serverUrlSaprFlightPathInTimePeriod + sapr.idSAPR + "&startTime="+startDate.value+"&endTime="+stopDate.value;
+				console.log(url);
+				$http.get(url).then(function(resp) {     		
+											
+											flightPath = resp.data;
+											$scope.flightPath = flightPath;
+											console.log("Flight Path in period: ");
+											console.log(flightPath);
+											$scope.saprPath = [];
+											angular.forEach($scope.flightPath, function(val) {	
+												var pathElement = [val.lat,val.lng];
+												$scope.saprPath.push(pathElement);							
+												console.log(pathElement);
+											})
+											
+								  }, function(err) {
+									console.error('ERR', err);
+									// err.status will contain the status code
+							 }
+				);
+				
+			};
+			
+			
+			$scope.removeClass = function(id) {	
+				console.log(vm.map.kmlLayers);
+				if (id == "checkboxClassAll"){					
+					if (document.getElementById(id).checked) {
+					document.getElementById("checkboxClassA").checked = true;
+					document.getElementById("checkboxClassB").checked = true;
+					document.getElementById("checkboxClassC").checked = true;
+					document.getElementById("checkboxClassD").checked = true;
+					document.getElementById("checkboxClassF").checked = true;
+					document.getElementById("checkboxClassX").checked = true;
+					vm.map.kmlLayers.classA.setMap(vm.map);
+					vm.map.kmlLayers.classB.setMap(vm.map);
+					vm.map.kmlLayers.classC.setMap(vm.map);
+					vm.map.kmlLayers.classD.setMap(vm.map);
+					vm.map.kmlLayers.classF.setMap(vm.map);
+					vm.map.kmlLayers.classX.setMap(vm.map);
+					}
+					else {
+					document.getElementById("checkboxClassA").checked = false;
+					document.getElementById("checkboxClassB").checked = false;
+					document.getElementById("checkboxClassC").checked = false;
+					document.getElementById("checkboxClassD").checked = false;
+					document.getElementById("checkboxClassF").checked = false;
+					document.getElementById("checkboxClassX").checked = false;
+					vm.map.kmlLayers.classA.setMap(null);
+					vm.map.kmlLayers.classB.setMap(null);
+					vm.map.kmlLayers.classC.setMap(null);
+					vm.map.kmlLayers.classD.setMap(null);
+					vm.map.kmlLayers.classF.setMap(null);
+					vm.map.kmlLayers.classX.setMap(null);
+					}
+				}
+				if (id == "checkboxClassA"){					
+					if (document.getElementById(id).checked) vm.map.kmlLayers.classA.setMap(vm.map);
+					else {
+					vm.map.kmlLayers.classA.setMap(null);
+					document.getElementById("checkboxClassAll").checked = false;
+					}
+				}
+				if (id == "checkboxClassB"){
+					if (document.getElementById(id).checked) vm.map.kmlLayers.classB.setMap(vm.map);
+					else {
+					vm.map.kmlLayers.classB.setMap(null);
+					document.getElementById("checkboxClassAll").checked = false;
+					}
+				}
+				if (id == "checkboxClassC"){
+					if (document.getElementById(id).checked) vm.map.kmlLayers.classC.setMap(vm.map);
+					else {
+					vm.map.kmlLayers.classC.setMap(null);
+					document.getElementById("checkboxClassAll").checked = false;
+					}
+				}
+				if (id == "checkboxClassD"){
+					if (document.getElementById(id).checked) vm.map.kmlLayers.classD.setMap(vm.map);
+					else {
+					vm.map.kmlLayers.classD.setMap(null);
+					document.getElementById("checkboxClassAll").checked = false;
+					}
+				}		
+				if (id == "checkboxClassF"){
+					if (document.getElementById(id).checked) vm.map.kmlLayers.classF.setMap(vm.map);
+					else {
+					vm.map.kmlLayers.classF.setMap(null);
+					document.getElementById("checkboxClassAll").checked = false;
+					}
+				}
+				if (id == "checkboxClassX"){
+					if (document.getElementById(id).checked) vm.map.kmlLayers.classX.setMap(vm.map);
+					else {
+					vm.map.kmlLayers.classX.setMap(null);
+					document.getElementById("checkboxClassAll").checked = false;
+					}
+				}
+				
+			};
+			
+			$interval(function() {
+				console.log("Selected SAPR: ");
+				console.log(selectedSAPR);
+				$http.get(serverUrlSapr).then(function(resp) {  
+					saprList = resp.data;
+					$scope.saprList = saprList;
+					console.log("SAPR LIST: ");
+					console.log(saprList);							
+				}, function(err) {
+					console.error('ERR', err);
+					// err.status will contain the status code
+				})
+				
+				checkboxFlightChronology
+				if ((selectedSAPR != null )&&(!document.getElementById("checkboxFlightChronology").checked ) ){
+					// Get SAPR's Flight Path	
+					// Es: http://localhost:3000/saprFlightPath/?idSapr=2
+					
+					$http.get(serverUrlSaprFlightPath+selectedSAPR.idSAPR).then(function(resp) {     		
+												
+												flightPath = resp.data;
+												$scope.flightPath = flightPath;
+												console.log("Flight Path: ");
+												console.log(flightPath);
+												$scope.saprPath = [];
+												angular.forEach($scope.flightPath, function(val) {	
+													var pathElement = [val.lat,val.lng];
+													$scope.saprPath.push(pathElement);							
+													console.log(pathElement);
+												})
+												
+									  }, function(err) {
+										console.error('ERR', err);
+										// err.status will contain the status code
+								 }
+					);
+				}
+		  }, 1000);
+			  
+		}]);
+	</script>
+	
+</head>
+
+<body ng-controller="appCtrl" class="headerBackground">
+		
+			<div  style="align:center;"><h3>SAPR TRACKER</h3></div>
+			<div style="block">
+					<a id="configureButton" class="configure" title="Configure"></a>	
+			</div>
+	
+			
+	
+		
+	<ng-map zoom="18" center="[44.202, 12.0620677]" tilt="45"  map-type-id="SATELLITE">	
+	<div  ng-repeat="sapr in saprList">
+		<div ng-switch on="sapr.configurazione">	
+			<marker id='S{{sapr.idSAPR}}' ng-switch-when="helicopter" title="{{sapr.costruttore}}-{{sapr.tipo}}-{{sapr.numCostruzioneApr}} | {{sapr.nomeOperatore}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/heli.png',scaledSize:[20,20]}" on-click="showDetail(sapr)" ></marker>
+			<marker id='S{{sapr.idSAPR}}' ng-switch-when="airplane" title="{{sapr.costruttore}}-{{sapr.tipo}}-{{sapr.numCostruzioneApr}} | {{sapr.nomeOperatore}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/aircraft.png',scaledSize:[35,35]}" on-click="showDetail(sapr)"></marker>
+			<marker id='S{{sapr.idSAPR}}'ng-switch-default  title="{{sapr.costruttore}}-{{sapr.tipo}}-{{sapr.numCostruzioneApr}} | {{sapr.nomeOperatore}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/multirotor.png',scaledSize:[20,20]}" on-click="showDetail(sapr)"></marker>
+		</div>
+	</div>
+	
+	<shape id="operationRadius" name="circle"   
+			stroke-color="#00ff00"
+			stroke-opacity="0.8"
+			stroke-weight="2"
+			fill-color="#00ff00"
+			fill-opacity="0.15"      
+			center="[{{sapr.lat}},{{sapr.lng}}]"
+			radius="5">
+	</shape>
+		
+	<info-window id="point-iw">
+			<div ng-non-bindable="">			
+				Altitude: {{point.alt}} m (amsl)<br/>
+				Ground Speed: {{point.groundSpeed}} knots<br/>
+				Track Angle: {{point.trackAngle}} deg<br/>			  
+			</div>
+    </info-window>
+	
+	<div  ng-repeat="point in flightPath">	   
+			<marker id="P{{point.idx}}"  title="{{point.idx}} Altitude: {{point.alt}} m" position="{{point.lat}},{{point.lng}}" icon="{url:'images/utility/point.png',scaledSize:[10,10]}" on-click="showPointDetail(point)"></marker>		
+	</div>
+	
+	<shape name="polyline" id="foo"
+			path="{{saprPath}}"
+			geodesic="true"
+			stroke-color="#0000FF"
+			stroke-opacity="1.0"
+			stroke-weight="2">
+	</shape> 
+	
+		
+
+		
+	<div class="left_block pageLeftContent ">
+			<div class="content rcorners " >
+			<div class="top_block info gradient ">
+					<div class="content">
+					<div style="block">
+					<a id="closeButton" class="close" title="Close"></a>	
+			</div>
+
+			<div class="saprInfo">	
+	
+			<table class="saprInfoGrid">
+				<tbody>
+				<tr >					
+					<td align="left"   >
+						
+					  <img src="{{photoSaprUrl}}{{sapr.idSAPR}}.png" alt="" height="150px" width="150px">
+					</td>
+					<td colspan="2">
+					<table>
+					  <tr >
+						<td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>Manufacturer</b><br>
+					  <span >{{sapr.costruttore}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left"  colspan="3"style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>Type</b><br>
+					  <span > {{sapr.tipo}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>APR Number</b><br>
+					  <span > {{sapr.nunCostruzioneApr}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;border-bottom: none;"  >
+					  <b>Configuration</b><br>
+					  <span >{{sapr.configurazione}} </span>
+					  </td>
+					  </tr>
+					 </table>
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+					  <b>Heading</b><br>
+					  <span > {{sapr.trackAngle}} deg</span>
+					</td>
+					<td>
+					  <b>Ground Speed</b><br>
+					  <span > {{sapr.groundSpeed}} m/s </span>
+					</td>
+					<td>
+					  <b>MTOW</b><br>
+					  <span > {{sapr.MTOW}} kg</span>
+					</td>
+				  </tr>
+				  <tr>
+				 <tr>
+					<td>
+					  <b>Altitude</b><br>
+					  <span >{{sapr.alt}} m</span>
+					</td>
+					<td>
+					  <b>Latitude</b><br>
+					  <span >{{sapr.lat}} deg</span>
+					</td>
+					<td>
+					  <b>Longitude</b><br>
+					  <span >{{sapr.lng}} deg</span>
+					</td>
+				  </tr>				  
+				</tbody>
+			  </table>
+			</div>
+			
+			<div class="picInfo">	
+				<table class="saprInfoGrid">
+				<tbody>
+				<tr >					
+					<td align="left"   >
+						<img src="{{photoOperatorUrl}}{{sapr.idOperatore}}.jpg" alt="" height="150px" width="150px">
+					</td>
+					<td colspan="2">
+					<table>
+					  <tr >
+						<td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>Operator</b><br>
+					  <span >{{sapr.nomeOperatore}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left"  colspan="3"style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>Address</b><br>
+					  <span > {{sapr.indirizzo}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;border-bottom: none;"  >
+					  <b>Phone</b><br>
+					  <span > {{sapr.telefono}}</span>
+					  </td>
+					  </tr>					  
+					 </table>
+					</td>
+				  </tr>
+				<tr>
+				<tr>				
+					<td>
+					  <b>Qualified Pilots</b><br>					  
+					</td>					
+					<td>
+					  <b>Phone Number</b><br>
+					</td>
+				</tr>
+				<tr  ng-repeat="pilot in pilotList">
+					<td>
+					{{pilot.nome}} {{pilot.cognome}}					  
+					</td>					
+					<td>
+					  {{pilot.telefono}}	
+					</td>
+				</tr>
+				
+				</tbody>
+			  </table>
+			
+			
+			  </div>
+			  <div class="periodSelectorDivClass">			 	
+			 
+			  <table class="saprInfoGrid" ng-disabled="!checked">
+				<tbody>
+					<tr>				
+						<td colspan="2">
+						<input  id="checkboxFlightChronology" type="checkbox" ng-model="checked"/> <b>Flight chronology</b><br>					  
+						</td>
+					</tr>
+					<tr>				
+						<td>
+							<b>From</b><br>					  
+						</td>					
+						<td>
+							<b> <input id="startDate" name="startdate" type="date" ng-disabled="!checked"></b><br>
+						</td>
+					</tr>
+					<tr>				
+						<td>
+							<b>To</b><br>					  
+						</td>					
+						<td>
+							<b> <input id="stopDate" name="stoptdate" type="date" ng-disabled="!checked" ></b><br>
+						</td>
+					</tr>
+					<tr>				
+						<td colspan="2">
+							 <button ng-click="findFlightPathInPeriod(sapr)"ng-disabled="!checked">Find </button>					  
+						</td>
+					</tr>
+				</tbody>
+			  </table>
+			
+			 
+			 </div>	
+				</div>
+				</div>
+			</div>
+			
+		</div>
+
+<div class="right_block pageRightContent ">
+	<div class="content rcorners ">
+		<div class="top_block info ">
+			<div class="content gradient">
+				<div style="block">
+					<a id="closeConfigureButton" class="close" title="Close"></a>	
+				</div>
+				<div class="saprInfo">	
+				<form action="">
+				<fieldset>
+				 <legend>Flight Zone</legend><br>	
+				 <input  id="checkboxClassAll" type="checkbox" ng-click="removeClass('checkboxClassAll')" checked/> All
+				 <br />
+				 <input  id="checkboxClassA" type="checkbox" ng-click="removeClass('checkboxClassA')" checked/> Class A
+				 <br />
+				 <input  id="checkboxClassB" type="checkbox" ng-click="removeClass('checkboxClassB')" checked/> Class B
+				 <br />
+				 <input  id="checkboxClassC" type="checkbox" ng-click="removeClass('checkboxClassC')" checked/> Class C
+				 <br />
+				 <input  id="checkboxClassD" type="checkbox" ng-click="removeClass('checkboxClassD')" checked/> Class D
+				 <br />				 
+				 <input id="checkboxClassF" type="checkbox"  ng-click="removeClass('checkboxClassF')" checked/> Class F
+				 <br />
+				 <input  id="checkboxClassX" type="checkbox" ng-click="removeClass('checkboxClassX')" checked/> Class X
+				 <br />
+				 </fieldset>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<kml-layer id="classA" url="http://mdvlab.altervista.org/enac_v3/tracker/kml/class_a.kml" > 
+		</kml-layer>
+		<kml-layer id="classB" url="http://mdvlab.altervista.org/enac_v3/tracker/kml/class_b.kml" > 
+		</kml-layer>		
+		<kml-layer id="classC" url="http://mdvlab.altervista.org/enac_v3/tracker/kml/class_c.kml" > 
+		</kml-layer>	
+		<kml-layer id="classD" url="http://mdvlab.altervista.org/enac_v3/tracker/kml/class_d.kml" > 
+		</kml-layer>
+		<kml-layer id="classF" url="http://mdvlab.altervista.org/enac_v3/tracker/kml/class_f.kml" > 
+		</kml-layer>
+		<kml-layer id="classX" url="http://mdvlab.altervista.org/enac_v3/tracker/kml/class_x.kml" > 
+		</kml-layer>		
+	</ng-map>
+	
+</body>
+
+</html>

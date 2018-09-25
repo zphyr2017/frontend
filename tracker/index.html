@@ -1,0 +1,277 @@
+<!doctype html>
+<html ng-app="enacApp">
+
+<head>
+	<title>SAPR TRACKER WEB APPLICATION  by Flight Mechanics Lab, University of Bologna</title>
+	
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	
+	<link href="style.css" type="text/css" rel="stylesheet" />	
+	
+	<link rel="icon" href="images/favicon.ico">
+	
+	<script src="script-tags-for-development.js"></script>
+	<!-- JQuery -->
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+
+	
+	<script>
+	
+		var app = angular.module('enacApp', ['ngMap']);
+
+		
+		
+
+		app.controller('appCtrl',["$scope","NgMap",function($scope,NgMap,$http) {			
+			var serverUrlSapr = "http://localhost:3000/saprlist/";
+			var saprList;
+			
+			$http.get(serverUrlSapr).then(function(resp) {     		
+							
+							saprList = resp.data;
+							
+				  }, function(err) {
+					console.error('ERR', err);
+					// err.status will contain the status code
+			 }) 
+			$scope.saprList = saprList;
+			console.log(saprList);
+			//$scope.picList = picList;
+			
+						
+			$scope.photoSaprUrl =  "http://mdvlab.altervista.org/enac_v3/tracker/images/sapr/";
+			$scope.photoPicUrl =  "http://mdvlab.altervista.org/enac_v3/tracker/images/pilots/";
+
+			jQuery('#closeButton').click(function(){
+				jQuery( ".pageLeftContent" ).css( "width", "0px" );
+			});
+			
+			getPicFronId = function(picId) {
+				jQuery.each($scope.picList, function(i, val) {				
+					if (val.id == picId) {						
+						$scope.pic = val;
+					}				
+				});
+			};
+		
+		
+			$scope.showDetail = function(e, sapr) {
+				jQuery( ".pageLeftContent" ).css( "width", "250px" );			
+				$scope.sapr = sapr;										
+				getPicFronId(sapr.picId);
+				//var ref = new Firebase("https://scorching-inferno-9948.firebaseio.com/enac_v2/path/" + $scope.sapr.id);
+				
+			    // this uses AngularFire to create the synchronized array
+				//$scope.saprPoints = $firebaseArray(ref);
+				$scope.saprPath = [];
+				
+				ref.on('child_added', function(snapshot) {
+						$scope.saprPoints.$loaded().then(function(){
+						$scope.saprPath = [];
+						angular.forEach($scope.saprPoints, function(val) {	
+							var pathElement = [val.lat,val.lng];
+							$scope.saprPath.push(pathElement);							
+							console.log(pathElement);
+						})
+				});
+					
+				});	
+				
+				//$scope.saprPath = [];
+				$scope.saprPoints.$loaded().then(function(){
+						angular.forEach($scope.saprPoints, function(val) {							
+							var pathElement = [val.lat,val.lng];
+							$scope.saprPath.push(pathElement);														
+						})
+				});	
+				
+			};
+			
+			$scope.showPicDetail = function(e,pic) {
+				jQuery( ".pageLeftContent" ).css( "width", "250px" );				
+			};
+			
+			$scope.showPointDetail = function(e,point) {
+				$scope.point = point;
+				$scope.map.showInfoWindow('point-iw',point.counter);
+			};
+  
+  
+  
+		}]);
+	</script>
+	
+</head>
+
+<body ng-controller="appCtrl">
+	<ng-map zoom="18" center="[44.202, 12.0620677]" tilt="45"  map-type-id="SATELLITE">	
+		<div  ng-repeat="sapr in saprList">
+			<div ng-switch on="sapr.type">	
+				<marker id='{{sapr.id}}' ng-switch-when="helicopter" title="{{sapr.id}} : {{sapr.name}} | {{sapr.operator}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/heli.ico',scaledSize:[20,20]}" on-click="showDetail(sapr)" ></marker>
+				<marker id='{{sapr.id}}' ng-switch-when="airplane" title="{{sapr.id}} : {{sapr.name}} | {{sapr.operator}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/aircraft.png',scaledSize:[35,35]}" on-click="showDetail(sapr)"></marker>
+				<marker id='{{sapr.id}}'ng-switch-default  title="{{sapr.id}} : {{sapr.name}} | {{sapr.operator}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/multirotor.png',scaledSize:[20,20]}" on-click="showDetail(sapr)"></marker>
+			</div>
+		</div>
+			
+		<shape id="operationRadius" name="circle"   
+			stroke-color="#00ff00"
+			stroke-opacity="0.8"
+			stroke-weight="2"
+			fill-color="#00ff00"
+			fill-opacity="0.15"      
+			center="[{{pic.lat}},{{pic.lng}}]"
+			radius="{{pic.operationRadius}}">
+		</shape>	  
+		
+		<info-window id="point-iw">
+			<div ng-non-bindable="">			
+				Altitude: {{point.alt}} m (amsl)<br/>
+				Ground Speed: {{point.groundSpeed}} knots<br/>
+				Track Angle: {{point.trackAngle}} deg<br/>			  
+			</div>
+        </info-window>
+		
+		<shape name="polyline" id="foo"
+			path="{{saprPath}}"
+			geodesic="true"
+			stroke-color="#0000FF"
+			stroke-opacity="1.0"
+			stroke-weight="2">
+	    </shape> 
+	  
+		<div  ng-repeat="point in saprPoints">	   
+			<marker id="{{point.counter}}"  title="{{point.counter}} Atitude: {{point.alt}} m" position="{{point.lat}},{{point.lng}}" icon="{url:'images/utility/point.png',scaledSize:[10,10]}" on-click="showPointDetail(point)"></marker>		
+		</div>
+		
+		<marker id='{{pic.id}}'  title='{{pic.name}}'  position='[{{pic.lat}},{{pic.lng}}]'  icon="{url:'images/icons/pic.png',scaledSize:[20,20]}" on-click="showPicDetail(pic)"></marker>
+		
+		
+		
+		<div class="left_block pageLeftContent">
+			<div class="content">
+			<div class="top_block info">
+					<div class="content">
+					<div style="block">
+					<a id="closeButton" class="close" title="Close"></a>	
+					</div>
+
+			<div class="saprInfo">	
+	
+			<table class="saprInfoGrid">
+				<tbody>
+				<tr >
+					
+					<td align="center"  colspan="2">
+						
+					  <img src="{{photoSaprUrl}}{{sapr.id}}.png" alt="" height="160px" width="200px">
+					</td>
+				  </tr>
+				  <tr >
+					
+					<td colspan="2">
+					  Id<br>
+					  <span >{{sapr.id}}</span>
+					</td>
+				  </tr>
+				  
+				  <tr>
+					
+					<td colspan="2">
+					  Operator<br>
+					  <span > {{sapr.operator}}</span>
+					</td>
+				  </tr>
+				  <tr>
+				
+					<td>
+					  Altitude<br>
+					  <span >{{sapr.alt}} m</span>
+					</td>
+					<td>
+					  Vertical Speed<br>
+					  <span > n/a</span>
+					</td>
+				  </tr>
+				  <tr>
+					
+					<td>
+					  Ground Speed<br>
+					  <span > {{sapr.groundSpeed}} m/s </span>
+					</td>
+					<td>
+					  Heading<br>
+					  <span > {{sapr.trackAngle}} deg</span>
+					</td>
+				  </tr>
+				  <tr>
+					
+					<td>
+					  Latitude<br>
+					  <span >{{sapr.lat}} deg</span>
+					</td>
+					<td>
+					  Longitude<br>
+					  <span >{{sapr.lng}} deg</span>
+					</td>
+				  </tr>				  
+				</tbody>
+			  </table>
+			</div>
+			<div class="picInfo">								
+			<table class="picInfoGrid">
+				<tbody>
+				  <tr >
+					
+					<td align="center" colspan="2">					
+					  <img src="{{photoPicUrl}}{{pic.id}}.jpg" alt="" height="160px" width="200px">
+					</td>
+				  </tr>
+				  <tr>
+					
+					<td colspan="2">
+					  ID</span><br>
+					  <span > {{pic.id}}</span>
+					</td>
+				  </tr>
+				  <tr>
+					
+					<td colspan="2">
+					  Name<br>
+					  <span > {{pic.name}}</span>
+					</td>
+				  </tr>
+				  <tr>
+					
+					<td colspan="2">
+					  Operator<br>
+					  <span > {{pic.operator}}</span>
+					</td>
+				  </tr>
+				  <tr>
+			
+				  <tr>					
+					<td>
+					  Latitude<br>
+					  <span >{{pic.lat}}</span>
+					</td>
+					<td>
+					  Longitude<br>
+					  <span >{{pic.lng}}</span>
+					</td>
+				  </tr>				  
+				</tbody>
+			  </table>
+			  </div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	  
+	</ng-map>
+	
+</body>
+
+</html>

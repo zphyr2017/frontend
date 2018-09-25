@@ -1,0 +1,2300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>class_a.kml</name>
+	<Style id="khStyle3">
+		<IconStyle id="khIconStyle3">
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal3/icon56.png</href>
+				<x>96</x>
+				<y>96</y>
+				<w>32</w>
+				<h>32</h>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="khStyle1">
+		<IconStyle id="khIconStyle1">
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pal4/icon56.png</href>
+				<x>32</x>
+				<y>128</y>
+				<w>1</w>
+				<h>1</h>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<color>4fffffff</color>
+			<scale>0.7</scale>
+		</LabelStyle>
+	</Style>
+	<Folder>
+		<name>CLASS A</name>
+		<Folder>
+			<name>CTA/CTR</name>
+			<Folder>
+				<name>CTR C MALPENSA 1H</name>
+				<Placemark>
+					<name>CTR C MALPENSA 1H</name>
+					<description>CTR C MALPENSA 1H
+1500MSL-2500MSL</description>
+					<styleUrl>#khStyle3</styleUrl>
+					<Style>
+						<LineStyle>
+							<color>ffff0000</color>
+						</LineStyle>
+						<PolyStyle>
+							<color>8fffffff</color>
+						</PolyStyle>
+					</Style>
+					<Polygon id="khPolygon552">
+						<tessellate>1</tessellate>
+						<altitudeMode>absolute</altitudeMode>
+						<outerBoundaryIs>
+							<LinearRing id="khLinearRing553">
+								<coordinates>
+									8.616944444444441,45.7333333333333,762 8.800277777777779,45.7333333333333,762 8.80027727857208,45.733153939743,762 8.820177250320469,45.7321537832859,762 8.839682422563969,45.7292268507756,762 8.85841126749267,45.72443040807941,762 8.875997676038811,45.7178582788894,762 8.892098206240741,45.7096389821384,762 8.906398856577409,45.699933183727,762 8.918621225552821,45.6889305158431,762 8.92852793399488,45.6768458299791,762 8.935927204391611,45.66391496095861,762 8.9406765114918,45.65039008863621,762 8.942685239676941,45.6365347912702,762 8.94191630460363,45.6226188897891,762 8.93838671869138,45.6089131852334,762 8.93305555555555,45.5966666666667,762 8.85611111111111,45.4597222222222,762 8.74444444444444,45.4288888888889,762 8.4625,45.4994444444444,762 8.47388888888889,45.63916666666671,762 8.474147750851531,45.6391562526172,762 8.47667693209452,45.6529698398659,762 8.48193368739244,45.66640274147879,762 8.48981747211772,45.6791931362108,762 8.500176254167529,45.6910915515883,762 8.512809362254609,45.7018657599385,762 8.52747131695258,45.7113053479311,762 8.543876575921219,45.7192258668525,762 8.56170510366611,45.7254724785603,762 8.58060865661721,45.7299230217802,762 8.600217656909029,45.7324904349399,762 8.616944444444441,45.7333333333333,762 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Folder>
+					<name>CTR C MALPENSA 1H</name>
+					<Placemark>
+						<name>[S0]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.616944444444441,45.7333333333333,762 8.616944444444441,45.7333333333333,456.9999999999999 8.800277777777779,45.7333333333333,456.9999999999999 8.800277777777779,45.7333333333333,762 8.616944444444441,45.7333333333333,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S1]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.800277777777779,45.7333333333333,762 8.800277777777779,45.7333333333333,456.9999999999999 8.80027727857208,45.733153939743,456.9999999999999 8.80027727857208,45.733153939743,762 8.800277777777779,45.7333333333333,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S2]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.80027727857208,45.733153939743,762 8.80027727857208,45.733153939743,456.9999999999999 8.820177250320469,45.7321537832859,456.9999999999999 8.820177250320469,45.7321537832859,762 8.80027727857208,45.733153939743,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S3]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.820177250320469,45.7321537832859,762 8.820177250320469,45.7321537832859,456.9999999999999 8.839682422563969,45.7292268507756,456.9999999999999 8.839682422563969,45.7292268507756,762 8.820177250320469,45.7321537832859,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S4]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.839682422563969,45.7292268507756,762 8.839682422563969,45.7292268507756,456.9999999999999 8.85841126749267,45.72443040807941,456.9999999999999 8.85841126749267,45.72443040807941,762 8.839682422563969,45.7292268507756,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S5]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.85841126749267,45.72443040807941,762 8.85841126749267,45.72443040807941,456.9999999999999 8.875997676038811,45.7178582788894,456.9999999999999 8.875997676038811,45.7178582788894,762 8.85841126749267,45.72443040807941,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S6]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.875997676038811,45.7178582788894,762 8.875997676038811,45.7178582788894,456.9999999999999 8.892098206240741,45.7096389821384,456.9999999999999 8.892098206240741,45.7096389821384,762 8.875997676038811,45.7178582788894,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S7]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.892098206240741,45.7096389821384,762 8.892098206240741,45.7096389821384,456.9999999999999 8.906398856577409,45.699933183727,456.9999999999999 8.906398856577409,45.699933183727,762 8.892098206240741,45.7096389821384,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S8]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.906398856577409,45.699933183727,762 8.906398856577409,45.699933183727,456.9999999999999 8.918621225552821,45.6889305158431,456.9999999999999 8.918621225552821,45.6889305158431,762 8.906398856577409,45.699933183727,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S9]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.918621225552821,45.6889305158431,762 8.918621225552821,45.6889305158431,456.9999999999999 8.92852793399488,45.6768458299791,456.9999999999999 8.92852793399488,45.6768458299791,762 8.918621225552821,45.6889305158431,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S10]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.92852793399488,45.6768458299791,762 8.92852793399488,45.6768458299791,456.9999999999999 8.935927204391611,45.66391496095861,456.9999999999999 8.935927204391611,45.66391496095861,762 8.92852793399488,45.6768458299791,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S11]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.935927204391611,45.66391496095861,762 8.935927204391611,45.66391496095861,456.9999999999999 8.9406765114918,45.65039008863621,456.9999999999999 8.9406765114918,45.65039008863621,762 8.935927204391611,45.66391496095861,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S12]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.9406765114918,45.65039008863621,762 8.9406765114918,45.65039008863621,456.9999999999999 8.942685239676941,45.6365347912702,456.9999999999999 8.942685239676941,45.6365347912702,762 8.9406765114918,45.65039008863621,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S13]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.942685239676941,45.6365347912702,762 8.942685239676941,45.6365347912702,456.9999999999999 8.94191630460363,45.6226188897891,456.9999999999999 8.94191630460363,45.6226188897891,762 8.942685239676941,45.6365347912702,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S14]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.94191630460363,45.6226188897891,762 8.94191630460363,45.6226188897891,456.9999999999999 8.93838671869138,45.6089131852334,456.9999999999999 8.93838671869138,45.6089131852334,762 8.94191630460363,45.6226188897891,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S15]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.93838671869138,45.6089131852334,762 8.93838671869138,45.6089131852334,456.9999999999999 8.93305555555555,45.5966666666667,456.9999999999999 8.93305555555555,45.5966666666667,762 8.93838671869138,45.6089131852334,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S16]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.93305555555555,45.5966666666667,762 8.93305555555555,45.5966666666667,456.9999999999999 8.85611111111111,45.4597222222222,456.9999999999999 8.85611111111111,45.4597222222222,762 8.93305555555555,45.5966666666667,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S17]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.85611111111111,45.4597222222222,762 8.85611111111111,45.4597222222222,456.9999999999999 8.74444444444444,45.4288888888889,456.9999999999999 8.74444444444444,45.4288888888889,762 8.85611111111111,45.4597222222222,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S18]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.74444444444444,45.4288888888889,762 8.74444444444444,45.4288888888889,456.9999999999999 8.4625,45.4994444444444,456.9999999999999 8.4625,45.4994444444444,762 8.74444444444444,45.4288888888889,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S19]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.4625,45.4994444444444,762 8.4625,45.4994444444444,456.9999999999999 8.47388888888889,45.63916666666671,456.9999999999999 8.47388888888889,45.63916666666671,762 8.4625,45.4994444444444,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S20]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.47388888888889,45.63916666666671,762 8.47388888888889,45.63916666666671,456.9999999999999 8.474147750851531,45.6391562526172,456.9999999999999 8.474147750851531,45.6391562526172,762 8.47388888888889,45.63916666666671,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S21]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.474147750851531,45.6391562526172,762 8.474147750851531,45.6391562526172,456.9999999999999 8.47667693209452,45.6529698398659,456.9999999999999 8.47667693209452,45.6529698398659,762 8.474147750851531,45.6391562526172,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S22]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.47667693209452,45.6529698398659,762 8.47667693209452,45.6529698398659,456.9999999999999 8.48193368739244,45.66640274147879,456.9999999999999 8.48193368739244,45.66640274147879,762 8.47667693209452,45.6529698398659,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S23]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.48193368739244,45.66640274147879,762 8.48193368739244,45.66640274147879,456.9999999999999 8.48981747211772,45.6791931362108,456.9999999999999 8.48981747211772,45.6791931362108,762 8.48193368739244,45.66640274147879,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S24]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.48981747211772,45.6791931362108,762 8.48981747211772,45.6791931362108,456.9999999999999 8.500176254167529,45.6910915515883,456.9999999999999 8.500176254167529,45.6910915515883,762 8.48981747211772,45.6791931362108,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S25]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.500176254167529,45.6910915515883,762 8.500176254167529,45.6910915515883,456.9999999999999 8.512809362254609,45.7018657599385,456.9999999999999 8.512809362254609,45.7018657599385,762 8.500176254167529,45.6910915515883,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S26]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.512809362254609,45.7018657599385,762 8.512809362254609,45.7018657599385,456.9999999999999 8.52747131695258,45.7113053479311,456.9999999999999 8.52747131695258,45.7113053479311,762 8.512809362254609,45.7018657599385,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S27]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.52747131695258,45.7113053479311,762 8.52747131695258,45.7113053479311,456.9999999999999 8.543876575921219,45.7192258668525,456.9999999999999 8.543876575921219,45.7192258668525,762 8.52747131695258,45.7113053479311,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S28]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.543876575921219,45.7192258668525,762 8.543876575921219,45.7192258668525,456.9999999999999 8.56170510366611,45.7254724785603,456.9999999999999 8.56170510366611,45.7254724785603,762 8.543876575921219,45.7192258668525,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S29]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.56170510366611,45.7254724785603,762 8.56170510366611,45.7254724785603,456.9999999999999 8.58060865661721,45.7299230217802,456.9999999999999 8.58060865661721,45.7299230217802,762 8.56170510366611,45.7254724785603,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S30]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.58060865661721,45.7299230217802,762 8.58060865661721,45.7299230217802,456.9999999999999 8.600217656909029,45.7324904349399,456.9999999999999 8.600217656909029,45.7324904349399,762 8.58060865661721,45.7299230217802,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S31]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.600217656909029,45.7324904349399,762 8.600217656909029,45.7324904349399,456.9999999999999 8.616944444444441,45.7333333333333,456.9999999999999 8.616944444444441,45.7333333333333,762 8.600217656909029,45.7324904349399,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+				</Folder>
+				<Placemark>
+					<description>CTR C MALPENSA 1H
+1500MSL-2500MSL</description>
+					<LookAt id="khLookAt812">
+						<longitude>8.7242639714805</longitude>
+						<latitude>45.6666936148646</latitude>
+						<altitude>0</altitude>
+						<heading>0</heading>
+						<tilt>0</tilt>
+						<range>6096</range>
+					</LookAt>
+					<styleUrl>#khStyle1</styleUrl>
+					<Point>
+						<altitudeMode>absolute</altitudeMode>
+						<coordinates>8.7242639714805,45.6666936148646,762</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>CTR C MALPENSA 1H</name>
+					<LookAt id="khLookAt812">
+						<longitude>8.7242639714805</longitude>
+						<latitude>45.6666936148646</latitude>
+						<altitude>0</altitude>
+						<heading>0</heading>
+						<tilt>0</tilt>
+						<range>6096</range>
+					</LookAt>
+					<styleUrl>#khStyle1</styleUrl>
+					<Point>
+						<altitudeMode>absolute</altitudeMode>
+						<coordinates>8.7242639714805,45.6666936148646,762</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>CTR C MALPENSA 2</name>
+				<Placemark>
+					<name>CTR C MALPENSA 2</name>
+					<description>CTR C MALPENSA 2
+2500MSL-5500MSL</description>
+					<styleUrl>#khStyle3</styleUrl>
+					<Style>
+						<LineStyle>
+							<color>ffff0000</color>
+						</LineStyle>
+						<PolyStyle>
+							<color>8fffffff</color>
+						</PolyStyle>
+					</Style>
+					<Polygon id="khPolygon552">
+						<tessellate>1</tessellate>
+						<altitudeMode>absolute</altitudeMode>
+						<outerBoundaryIs>
+							<LinearRing id="khLinearRing553">
+								<coordinates>
+									8.47666666666667,45.6522222222222,1676 8.50194444444444,45.7452777777778,1676 8.501904489622319,45.7452830954778,1676 8.50530296711424,45.7542593165104,1676 8.510460120289819,45.76281794954029,1676 8.51727621459823,45.7707921816615,1676 8.52561902050171,45.7780265215481,1676 8.535326352898769,45.7843798477655,1676 8.54305555555556,45.7888888888889,1676 8.54219459288387,45.7895464966354,1676 8.573510386579461,45.80684054697689,1676 8.607991673933251,45.820917855772,1676 8.644963273722031,45.83150189758081,1676 8.65555555555556,45.8222222222222,1676 8.650740500510381,45.8329724231024,1676 8.66370667131079,45.8351130819484,1676 8.67697481207275,45.8359740958358,1676 8.69028576687082,45.8355386467109,1676 8.70337953461376,45.8338152402327,1676 8.716000401171531,45.8308375378709,1676 8.727901983390289,45.82666369258359,1676 8.738852081590499,45.82137520172029,1676 8.7486372416562,45.8150753006704,1676 8.749166666666669,45.81361111111111,1676 8.855,45.72583333333331,1676 8.828888888888891,45.7311111111111,1676 8.800277777777779,45.7333333333333,1676 8.616944444444441,45.7333333333333,1676 8.579166666666669,45.7305555555556,1676 8.54777777777778,45.7216666666667,1676 8.508333333333329,45.6994444444444,1676 8.48555555555556,45.6744444444444,1676 8.47666666666667,45.6522222222222,1676 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Folder>
+					<name>CTR C MALPENSA 2</name>
+					<Placemark>
+						<name>[S0]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.47666666666667,45.6522222222222,1676 8.47666666666667,45.6522222222222,762 8.50194444444444,45.7452777777778,762 8.50194444444444,45.7452777777778,1676 8.47666666666667,45.6522222222222,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S1]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.50194444444444,45.7452777777778,1676 8.50194444444444,45.7452777777778,762 8.501904489622319,45.7452830954778,762 8.501904489622319,45.7452830954778,1676 8.50194444444444,45.7452777777778,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S2]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.501904489622319,45.7452830954778,1676 8.501904489622319,45.7452830954778,762 8.50530296711424,45.7542593165104,762 8.50530296711424,45.7542593165104,1676 8.501904489622319,45.7452830954778,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S3]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.50530296711424,45.7542593165104,1676 8.50530296711424,45.7542593165104,762 8.510460120289819,45.76281794954029,762 8.510460120289819,45.76281794954029,1676 8.50530296711424,45.7542593165104,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S4]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.510460120289819,45.76281794954029,1676 8.510460120289819,45.76281794954029,762 8.51727621459823,45.7707921816615,762 8.51727621459823,45.7707921816615,1676 8.510460120289819,45.76281794954029,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S5]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.51727621459823,45.7707921816615,1676 8.51727621459823,45.7707921816615,762 8.52561902050171,45.7780265215481,762 8.52561902050171,45.7780265215481,1676 8.51727621459823,45.7707921816615,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S6]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.52561902050171,45.7780265215481,1676 8.52561902050171,45.7780265215481,762 8.535326352898769,45.7843798477655,762 8.535326352898769,45.7843798477655,1676 8.52561902050171,45.7780265215481,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S7]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.535326352898769,45.7843798477655,1676 8.535326352898769,45.7843798477655,762 8.54305555555556,45.7888888888889,762 8.54305555555556,45.7888888888889,1676 8.535326352898769,45.7843798477655,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S8]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.54305555555556,45.7888888888889,1676 8.54305555555556,45.7888888888889,762 8.54219459288387,45.7895464966354,762 8.54219459288387,45.7895464966354,1676 8.54305555555556,45.7888888888889,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S9]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.54219459288387,45.7895464966354,1676 8.54219459288387,45.7895464966354,762 8.573510386579461,45.80684054697689,762 8.573510386579461,45.80684054697689,1676 8.54219459288387,45.7895464966354,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S10]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.573510386579461,45.80684054697689,1676 8.573510386579461,45.80684054697689,762 8.607991673933251,45.820917855772,762 8.607991673933251,45.820917855772,1676 8.573510386579461,45.80684054697689,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S11]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.607991673933251,45.820917855772,1676 8.607991673933251,45.820917855772,762 8.644963273722031,45.83150189758081,762 8.644963273722031,45.83150189758081,1676 8.607991673933251,45.820917855772,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S12]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.644963273722031,45.83150189758081,1676 8.644963273722031,45.83150189758081,762 8.65555555555556,45.8222222222222,762 8.65555555555556,45.8222222222222,1676 8.644963273722031,45.83150189758081,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S13]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.65555555555556,45.8222222222222,1676 8.65555555555556,45.8222222222222,762 8.650740500510381,45.8329724231024,762 8.650740500510381,45.8329724231024,1676 8.65555555555556,45.8222222222222,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S14]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.650740500510381,45.8329724231024,1676 8.650740500510381,45.8329724231024,762 8.66370667131079,45.8351130819484,762 8.66370667131079,45.8351130819484,1676 8.650740500510381,45.8329724231024,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S15]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.66370667131079,45.8351130819484,1676 8.66370667131079,45.8351130819484,762 8.67697481207275,45.8359740958358,762 8.67697481207275,45.8359740958358,1676 8.66370667131079,45.8351130819484,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S16]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.67697481207275,45.8359740958358,1676 8.67697481207275,45.8359740958358,762 8.69028576687082,45.8355386467109,762 8.69028576687082,45.8355386467109,1676 8.67697481207275,45.8359740958358,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S17]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.69028576687082,45.8355386467109,1676 8.69028576687082,45.8355386467109,762 8.70337953461376,45.8338152402327,762 8.70337953461376,45.8338152402327,1676 8.69028576687082,45.8355386467109,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S18]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.70337953461376,45.8338152402327,1676 8.70337953461376,45.8338152402327,762 8.716000401171531,45.8308375378709,762 8.716000401171531,45.8308375378709,1676 8.70337953461376,45.8338152402327,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S19]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.716000401171531,45.8308375378709,1676 8.716000401171531,45.8308375378709,762 8.727901983390289,45.82666369258359,762 8.727901983390289,45.82666369258359,1676 8.716000401171531,45.8308375378709,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S20]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.727901983390289,45.82666369258359,1676 8.727901983390289,45.82666369258359,762 8.738852081590499,45.82137520172029,762 8.738852081590499,45.82137520172029,1676 8.727901983390289,45.82666369258359,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S21]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.738852081590499,45.82137520172029,1676 8.738852081590499,45.82137520172029,762 8.7486372416562,45.8150753006704,762 8.7486372416562,45.8150753006704,1676 8.738852081590499,45.82137520172029,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S22]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.7486372416562,45.8150753006704,1676 8.7486372416562,45.8150753006704,762 8.749166666666669,45.81361111111111,762 8.749166666666669,45.81361111111111,1676 8.7486372416562,45.8150753006704,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S23]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.749166666666669,45.81361111111111,1676 8.749166666666669,45.81361111111111,762 8.855,45.72583333333331,762 8.855,45.72583333333331,1676 8.749166666666669,45.81361111111111,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S24]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.855,45.72583333333331,1676 8.855,45.72583333333331,762 8.828888888888891,45.7311111111111,762 8.828888888888891,45.7311111111111,1676 8.855,45.72583333333331,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S25]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.828888888888891,45.7311111111111,1676 8.828888888888891,45.7311111111111,762 8.800277777777779,45.7333333333333,762 8.800277777777779,45.7333333333333,1676 8.828888888888891,45.7311111111111,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S26]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.800277777777779,45.7333333333333,1676 8.800277777777779,45.7333333333333,762 8.616944444444441,45.7333333333333,762 8.616944444444441,45.7333333333333,1676 8.800277777777779,45.7333333333333,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S27]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.616944444444441,45.7333333333333,1676 8.616944444444441,45.7333333333333,762 8.579166666666669,45.7305555555556,762 8.579166666666669,45.7305555555556,1676 8.616944444444441,45.7333333333333,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S28]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.579166666666669,45.7305555555556,1676 8.579166666666669,45.7305555555556,762 8.54777777777778,45.7216666666667,762 8.54777777777778,45.7216666666667,1676 8.579166666666669,45.7305555555556,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S29]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.54777777777778,45.7216666666667,1676 8.54777777777778,45.7216666666667,762 8.508333333333329,45.6994444444444,762 8.508333333333329,45.6994444444444,1676 8.54777777777778,45.7216666666667,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S30]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.508333333333329,45.6994444444444,1676 8.508333333333329,45.6994444444444,762 8.48555555555556,45.6744444444444,762 8.48555555555556,45.6744444444444,1676 8.508333333333329,45.6994444444444,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S31]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.48555555555556,45.6744444444444,1676 8.48555555555556,45.6744444444444,762 8.47666666666667,45.6522222222222,762 8.47666666666667,45.6522222222222,1676 8.48555555555556,45.6744444444444,1676 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+				</Folder>
+				<Placemark>
+					<description>CTR C MALPENSA 2
+2500MSL-5500MSL</description>
+					<LookAt id="khLookAt812">
+						<longitude>8.622792544333249</longitude>
+						<latitude>45.7776148554559</latitude>
+						<altitude>0</altitude>
+						<heading>0</heading>
+						<tilt>0</tilt>
+						<range>13408</range>
+					</LookAt>
+					<styleUrl>#khStyle1</styleUrl>
+					<Point>
+						<altitudeMode>absolute</altitudeMode>
+						<coordinates>8.622792544333249,45.7776148554559,1676</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>CTR C MALPENSA 2</name>
+					<LookAt id="khLookAt812">
+						<longitude>8.622792544333249</longitude>
+						<latitude>45.7776148554559</latitude>
+						<altitude>0</altitude>
+						<heading>0</heading>
+						<tilt>0</tilt>
+						<range>13408</range>
+					</LookAt>
+					<styleUrl>#khStyle1</styleUrl>
+					<Point>
+						<altitudeMode>absolute</altitudeMode>
+						<coordinates>8.622792544333249,45.7776148554559,1676</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>CTR C MALPENSA 3</name>
+				<Placemark>
+					<name>CTR C MALPENSA 3</name>
+					<description>CTR C MALPENSA 3
+1500MSL-2500MSL</description>
+					<styleUrl>#khStyle3</styleUrl>
+					<Style>
+						<LineStyle>
+							<color>ffff0000</color>
+						</LineStyle>
+						<PolyStyle>
+							<color>8fffffff</color>
+						</PolyStyle>
+					</Style>
+					<Polygon id="khPolygon552">
+						<tessellate>1</tessellate>
+						<altitudeMode>absolute</altitudeMode>
+						<outerBoundaryIs>
+							<LinearRing id="khLinearRing553">
+								<coordinates>
+									8.4625,45.4994444444444,762 8.74444444444444,45.4288888888889,762 8.85611111111111,45.4597222222222,762 8.77138888888889,45.3075,762 8.770957497859181,45.307618876231,762 8.76105248357881,45.29294116249491,762 8.7483456042866,45.27937466769829,762 8.73308526121051,45.26718256156631,762 8.71556882010877,45.2566011932886,762 8.696136798452409,45.2478355650625,762 8.675166271114589,45.2410554153044,762 8.6530636201664,45.2363919821541,762 8.63025676295117,45.233935505139,762 8.60718699911415,45.23373350936381,762 8.58430062183758,45.2357899025403,762 8.562040441284889,45.2400649007626,762 8.540837369268459,45.24647578433131,762 8.521102213450931,45.2548984703219,762 8.503217826952669,45.2651698741297,762 8.48753175499591,45.2770910181003,762 8.47434951406596,45.2904308317396,762 8.46392863087701,45.3049305750897,762 8.45647355805527,45.3203088048667,762 8.45213157077465,45.33626679209819,762 8.450989733513341,45.3524942904983,762 8.45083333333333,45.3566666666667,762 8.4625,45.4994444444444,762 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Folder>
+					<name>CTR C MALPENSA 3</name>
+					<Placemark>
+						<name>[S0]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.4625,45.4994444444444,762 8.4625,45.4994444444444,456.9999999999999 8.74444444444444,45.4288888888889,456.9999999999999 8.74444444444444,45.4288888888889,762 8.4625,45.4994444444444,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S1]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.74444444444444,45.4288888888889,762 8.74444444444444,45.4288888888889,456.9999999999999 8.85611111111111,45.4597222222222,456.9999999999999 8.85611111111111,45.4597222222222,762 8.74444444444444,45.4288888888889,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S2]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.85611111111111,45.4597222222222,762 8.85611111111111,45.4597222222222,456.9999999999999 8.77138888888889,45.3075,456.9999999999999 8.77138888888889,45.3075,762 8.85611111111111,45.4597222222222,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S3]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.77138888888889,45.3075,762 8.77138888888889,45.3075,456.9999999999999 8.770957497859181,45.307618876231,456.9999999999999 8.770957497859181,45.307618876231,762 8.77138888888889,45.3075,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S4]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.770957497859181,45.307618876231,762 8.770957497859181,45.307618876231,456.9999999999999 8.76105248357881,45.29294116249491,456.9999999999999 8.76105248357881,45.29294116249491,762 8.770957497859181,45.307618876231,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S5]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.76105248357881,45.29294116249491,762 8.76105248357881,45.29294116249491,456.9999999999999 8.7483456042866,45.27937466769829,456.9999999999999 8.7483456042866,45.27937466769829,762 8.76105248357881,45.29294116249491,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S6]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.7483456042866,45.27937466769829,762 8.7483456042866,45.27937466769829,456.9999999999999 8.73308526121051,45.26718256156631,456.9999999999999 8.73308526121051,45.26718256156631,762 8.7483456042866,45.27937466769829,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S7]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.73308526121051,45.26718256156631,762 8.73308526121051,45.26718256156631,456.9999999999999 8.71556882010877,45.2566011932886,456.9999999999999 8.71556882010877,45.2566011932886,762 8.73308526121051,45.26718256156631,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S8]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.71556882010877,45.2566011932886,762 8.71556882010877,45.2566011932886,456.9999999999999 8.696136798452409,45.2478355650625,456.9999999999999 8.696136798452409,45.2478355650625,762 8.71556882010877,45.2566011932886,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S9]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.696136798452409,45.2478355650625,762 8.696136798452409,45.2478355650625,456.9999999999999 8.675166271114589,45.2410554153044,456.9999999999999 8.675166271114589,45.2410554153044,762 8.696136798452409,45.2478355650625,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S10]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.675166271114589,45.2410554153044,762 8.675166271114589,45.2410554153044,456.9999999999999 8.6530636201664,45.2363919821541,456.9999999999999 8.6530636201664,45.2363919821541,762 8.675166271114589,45.2410554153044,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S11]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.6530636201664,45.2363919821541,762 8.6530636201664,45.2363919821541,456.9999999999999 8.63025676295117,45.233935505139,456.9999999999999 8.63025676295117,45.233935505139,762 8.6530636201664,45.2363919821541,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S12]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.63025676295117,45.233935505139,762 8.63025676295117,45.233935505139,456.9999999999999 8.60718699911415,45.23373350936381,456.9999999999999 8.60718699911415,45.23373350936381,762 8.63025676295117,45.233935505139,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S13]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.60718699911415,45.23373350936381,762 8.60718699911415,45.23373350936381,456.9999999999999 8.58430062183758,45.2357899025403,456.9999999999999 8.58430062183758,45.2357899025403,762 8.60718699911415,45.23373350936381,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S14]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.58430062183758,45.2357899025403,762 8.58430062183758,45.2357899025403,456.9999999999999 8.562040441284889,45.2400649007626,456.9999999999999 8.562040441284889,45.2400649007626,762 8.58430062183758,45.2357899025403,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S15]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.562040441284889,45.2400649007626,762 8.562040441284889,45.2400649007626,456.9999999999999 8.540837369268459,45.24647578433131,456.9999999999999 8.540837369268459,45.24647578433131,762 8.562040441284889,45.2400649007626,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S16]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.540837369268459,45.24647578433131,762 8.540837369268459,45.24647578433131,456.9999999999999 8.521102213450931,45.2548984703219,456.9999999999999 8.521102213450931,45.2548984703219,762 8.540837369268459,45.24647578433131,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S17]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.521102213450931,45.2548984703219,762 8.521102213450931,45.2548984703219,456.9999999999999 8.503217826952669,45.2651698741297,456.9999999999999 8.503217826952669,45.2651698741297,762 8.521102213450931,45.2548984703219,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S18]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.503217826952669,45.2651698741297,762 8.503217826952669,45.2651698741297,456.9999999999999 8.48753175499591,45.2770910181003,456.9999999999999 8.48753175499591,45.2770910181003,762 8.503217826952669,45.2651698741297,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S19]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.48753175499591,45.2770910181003,762 8.48753175499591,45.2770910181003,456.9999999999999 8.47434951406596,45.2904308317396,456.9999999999999 8.47434951406596,45.2904308317396,762 8.48753175499591,45.2770910181003,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S20]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.47434951406596,45.2904308317396,762 8.47434951406596,45.2904308317396,456.9999999999999 8.46392863087701,45.3049305750897,456.9999999999999 8.46392863087701,45.3049305750897,762 8.47434951406596,45.2904308317396,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S21]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.46392863087701,45.3049305750897,762 8.46392863087701,45.3049305750897,456.9999999999999 8.45647355805527,45.3203088048667,456.9999999999999 8.45647355805527,45.3203088048667,762 8.46392863087701,45.3049305750897,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S22]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.45647355805527,45.3203088048667,762 8.45647355805527,45.3203088048667,456.9999999999999 8.45213157077465,45.33626679209819,456.9999999999999 8.45213157077465,45.33626679209819,762 8.45647355805527,45.3203088048667,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S23]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.45213157077465,45.33626679209819,762 8.45213157077465,45.33626679209819,456.9999999999999 8.450989733513341,45.3524942904983,456.9999999999999 8.450989733513341,45.3524942904983,762 8.45213157077465,45.33626679209819,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S24]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.450989733513341,45.3524942904983,762 8.450989733513341,45.3524942904983,456.9999999999999 8.45083333333333,45.3566666666667,456.9999999999999 8.45083333333333,45.3566666666667,762 8.450989733513341,45.3524942904983,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>[S25]</name>
+						<styleUrl>#khStyle3</styleUrl>
+						<Style>
+							<LineStyle>
+								<color>ffff0000</color>
+							</LineStyle>
+							<PolyStyle>
+								<color>8fffffff</color>
+							</PolyStyle>
+						</Style>
+						<Polygon id="khPolygon552">
+							<tessellate>1</tessellate>
+							<altitudeMode>absolute</altitudeMode>
+							<outerBoundaryIs>
+								<LinearRing id="khLinearRing553">
+									<coordinates>
+										8.45083333333333,45.3566666666667,762 8.45083333333333,45.3566666666667,456.9999999999999 8.4625,45.4994444444444,456.9999999999999 8.4625,45.4994444444444,762 8.45083333333333,45.3566666666667,762 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+				</Folder>
+				<Placemark>
+					<description>CTR C MALPENSA 3
+1500MSL-2500MSL</description>
+					<LookAt id="khLookAt812">
+						<longitude>8.606653889680651</longitude>
+						<latitude>45.2989543809617</latitude>
+						<altitude>0</altitude>
+						<heading>0</heading>
+						<tilt>0</tilt>
+						<range>6096</range>
+					</LookAt>
+					<styleUrl>#khStyle1</styleUrl>
+					<Point>
+						<altitudeMode>absolute</altitudeMode>
+						<coordinates>8.606653889680651,45.2989543809617,762</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark>
+					<name>CTR C MALPENSA 3</name>
+					<LookAt id="khLookAt812">
+						<longitude>8.606653889680651</longitude>
+						<latitude>45.2989543809617</latitude>
+						<altitude>0</altitude>
+						<heading>0</heading>
+						<tilt>0</tilt>
+						<range>6096</range>
+					</LookAt>
+					<styleUrl>#khStyle1</styleUrl>
+					<Point>
+						<altitudeMode>absolute</altitudeMode>
+						<coordinates>8.606653889680651,45.2989543809617,762</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

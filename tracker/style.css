@@ -1,0 +1,169 @@
+/**
+ * Layout generated with http://layzilla.com
+ * Layout generator is free of use.
+ * We appreciate if you leave this comment block in commercial use of generator.
+ * All comment and ideas can be submitted to us using contacts below.
+ *
+ *    site: www.jmholding.com
+ *   email: info@jmholding.ru
+ *  twitter: @jmholding
+ */div.rcorners {    border-radius: 15px;    border: 2px solid red;}.headerBackground{ background: url('images/utility/background.jpg') 0 0px no-repeat;}.gradient{background: -moz-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* ff3.6+ */background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(192,192,192,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(128,128,128,1))); /* safari4+,chrome */background: -webkit-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* safari5.1+,chrome10+ */background: -o-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* opera 11.10+ */background: -ms-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* ie10+ */background: linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* w3c */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#c0c0c0',GradientType=1 ); /* ie6-9 */}
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%; 
+}
+
+ng-map { width:100%; height:900px;}
+
+h3 {
+    color: #000000;
+}
+
+a.close {
+    width: 23px;
+    height: 23px;
+    background: url('images/utility/crossButton.png') 0 0px no-repeat;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    cursor: pointer;
+    z-index: 100;
+}
+a.configure {    width: 40px;    height: 40px;    background: url('images/utility/configureButton.png') 0 0px no-repeat;    display: block;    position: absolute;    top: 10px;    right: 0;    cursor: pointer;    z-index: 100;}
+.content {
+	min-height: 100%;
+	position: relative;
+	overflow: auto;
+	z-index: 0; 
+}
+
+.background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.top_block {
+	width: 100%;
+	display: block;  
+   
+}
+
+.bottom_block {
+	position: absolute;
+	width: 100%;
+	display: block;
+	bottom: 0; 
+}
+
+.left_block {
+	display: block;
+    border-radius: 20px;
+	 position: absolute;
+  top: 50;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}.right_block {	display: block;    border-radius: 10px;	 position: absolute;  top: 50;  right: 0;  width: 100%;  height: 100%;  z-index: 10;}
+
+.center_block {
+	display: block;
+	width: auto; 
+}
+
+.pageHeader {
+	width: 100%;
+	height: 50px;
+	background-color: #000000;
+}
+
+.background.pageLeftContent {
+	height: auto !important;
+	padding-bottom: 0;
+	left: 0;
+	width: 250px;
+	background-color: #000000;
+	margin-top: 50px;		margin-left: 10px;
+	margin-bottom: 5px; 
+}
+.background.pageRightContent {	height: auto !important;	padding-bottom: 0;	right: 0;	width: 250px;	background-color: #000000;	margin-top: 50px;	margin-right: 10px;	margin-bottom: 5px; }
+.pageLeftContent {
+	height: auto;
+	width: 0px;
+	padding-bottom: 5px;
+}
+.pageRightContent {	height: auto;	width: 0px;	padding-bottom: 5px;}
+.background.pageContent {
+	height: auto !important;
+	padding-bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #000000;
+	margin-top: 50px;
+	margin-bottom: 5px;
+	margin-left: 0px; 
+}
+
+.pageContent {
+	width: auto;
+	height: auto;
+	padding-bottom: 5px;
+}
+
+.pageFooter {
+	width: 100%;
+	height: 5px;
+	background-color: #000000;
+}
+
+
+.info {
+	width: 100%;
+	height: 900px;
+	background-color: #ffffff;
+}
+.saprInfoGrid {
+		border:2px solid #C0C0C0;
+		border-collapse:collapse;
+		padding:2px;		margin-top: 5px; 				margin-bottom: 20px; 		
+		margin-left: 5px; 				margin-right: 5px; 
+		width: 440px;
+        max-width: 450px; 
+	} 
+	.saprInfo {		margin-top: 25px;	}
+	.saprInfoGrid th {
+		border:1px solid #C0C0C0;
+		padding:2px;		
+		width: 33%;
+	}
+	.saprInfoGrid td {
+		border:1px solid #C0C0C0;
+		padding:2px;
+		width: 33%;
+	}	
+	.picInfoGrid {
+		border:1px solid #C0C0C0;
+		border-collapse:collapse;
+		padding:5px;
+		margin-left: 0px; 
+		width: 450px;
+        max-width: 450px;  
+	}
+	.picInfoGrid th {
+		border:1px solid #C0C0C0;
+		padding:5px;			width: 33%;
+	}
+	.picInfoGrid td {
+		border:1px solid #C0C0C0;
+		padding:5px;
+		width: 33%;
+	}	
+
+

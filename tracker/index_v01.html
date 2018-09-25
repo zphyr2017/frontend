@@ -1,0 +1,311 @@
+<!doctype html>
+<html ng-app="enacApp">
+
+<head>
+	<title>SAPR TRACKER WEB APPLICATION  by Flight Mechanics Lab, University of Bologna</title>
+	
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	
+	<link href="style.css" type="text/css" rel="stylesheet" />	
+	
+	<link rel="icon" href="images/favicon.ico">
+	
+	<script src="script-tags-for-development.js"></script>
+	<!-- JQuery -->
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+
+
+	
+	<script>
+	
+		var app = angular.module('enacApp', ['ngMap']);
+
+		
+		
+
+		app.controller('appCtrl',["$scope","NgMap","$http",function($scope,NgMap,$http) {			
+			var serverUrlSapr = "http://localhost:3000/sapr/list.json";
+			var saprList;
+			
+			var serverUrlPilots = "http://localhost:3000/saprPilots/?idSapr=";
+			var piltsList;
+			
+			$scope.photoSaprUrl =  "http://mdvlab.altervista.org/enac_v3/tracker/images/sapr/";
+			$scope.photoOperatorUrl =  "http://mdvlab.altervista.org/enac_v3/tracker/images/operators/";
+			
+			var serverUrlSaprFlightPath = "http://localhost:3000/saprFlightPath/?idSapr=";
+			var saprList;
+			
+			
+			
+			$http.get(serverUrlSapr).then(function(resp) {     		
+							
+							saprList = resp.data;
+							$scope.saprList = saprList;
+							console.log("SAPR LIST: ");
+							console.log(saprList);
+							
+				  }, function(err) {
+					console.error('ERR', err);
+					// err.status will contain the status code
+			 }) 
+									
+			
+
+			jQuery('#closeButton').click(function(){
+				jQuery( ".pageLeftContent" ).css( "width", "0px" );
+			});
+			
+			$scope.showDetail = function(e, sapr) {
+				jQuery( ".pageLeftContent" ).css( "width", "470px" );			
+				$scope.sapr = sapr;	
+				console.log(serverUrlSaprFlightPath+sapr.idSAPR);
+				console.log(sapr);
+				
+				// Get SAPR's Qualified Pilot List
+				$http.get(serverUrlPilots+sapr.idSAPR).then(function(resp) {     		
+											
+											pilotList = resp.data;
+											$scope.pilotList = pilotList;
+											console.log("Pilots LIST: ");
+											console.log(pilotList);
+											
+								  }, function(err) {
+									console.error('ERR', err);
+									// err.status will contain the status code
+							 }); 	
+							 
+				// Get SAPR's Flight Path			 
+				$http.get(serverUrlSaprFlightPath+sapr.idSAPR).then(function(resp) {     		
+											
+											flightPath = resp.data;
+											$scope.flightPath = flightPath;
+											console.log("Flight Path: ");
+											console.log(flightPath);
+											$scope.saprPath = [];
+											angular.forEach($scope.flightPath, function(val) {	
+												var pathElement = [val.lat,val.lng];
+												$scope.saprPath.push(pathElement);							
+												console.log(pathElement);
+											})
+											
+								  }, function(err) {
+									console.error('ERR', err);
+									// err.status will contain the status code
+							 });
+
+													 
+							 
+			};
+			
+			$scope.showPointDetail = function(e,point) {
+				$scope.point = point;
+				console.log(point);
+				var pointID = "P" + $scope.point.idx;
+				console.log(pointID)
+				$scope.map.showInfoWindow('point-iw',pointID);
+			};
+			
+			
+			  
+		}]);
+	</script>
+	
+</head>
+
+<body ng-controller="appCtrl">
+		
+			<div>
+			<div style="align:center;"><h3>SAPR TRACKER</h3></div>
+			</div>
+	
+		
+	<ng-map zoom="18" center="[44.202, 12.0620677]" tilt="45"  map-type-id="SATELLITE">	
+	<div  ng-repeat="sapr in saprList">
+		<div ng-switch on="sapr.configurazione">	
+			<marker id='S{{sapr.idSAPR}}' ng-switch-when="helicopter" title="{{sapr.costruttore}}-{{sapr.tipo}}-{{sapr.numCostruzioneApr}} | {{sapr.nomeOperatore}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/heli.png',scaledSize:[20,20]}" on-click="showDetail(sapr)" ></marker>
+			<marker id='S{{sapr.idSAPR}}' ng-switch-when="airplane" title="{{sapr.costruttore}}-{{sapr.tipo}}-{{sapr.numCostruzioneApr}} | {{sapr.nomeOperatore}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/aircraft.png',scaledSize:[35,35]}" on-click="showDetail(sapr)"></marker>
+			<marker id='S{{sapr.idSAPR}}'ng-switch-default  title="{{sapr.costruttore}}-{{sapr.tipo}}-{{sapr.numCostruzioneApr}} | {{sapr.nomeOperatore}}"  position="{{sapr.lat}},{{sapr.lng}}" icon="{url:'images/icons/multirotor.png',scaledSize:[20,20]}" on-click="showDetail(sapr)"></marker>
+		</div>
+	</div>
+	
+	<shape id="operationRadius" name="circle"   
+			stroke-color="#00ff00"
+			stroke-opacity="0.8"
+			stroke-weight="2"
+			fill-color="#00ff00"
+			fill-opacity="0.15"      
+			center="[{{sapr.lat}},{{sapr.lng}}]"
+			radius="5">
+	</shape>
+		
+	<info-window id="point-iw">
+			<div ng-non-bindable="">			
+				Altitude: {{point.alt}} m (amsl)<br/>
+				Ground Speed: {{point.groundSpeed}} knots<br/>
+				Track Angle: {{point.trackAngle}} deg<br/>			  
+			</div>
+    </info-window>
+	
+	<div  ng-repeat="point in flightPath">	   
+			<marker id="P{{point.idx}}"  title="{{point.idx}} Altitude: {{point.alt}} m" position="{{point.lat}},{{point.lng}}" icon="{url:'images/utility/point.png',scaledSize:[10,10]}" on-click="showPointDetail(point)"></marker>		
+	</div>
+	
+	<shape name="polyline" id="foo"
+			path="{{saprPath}}"
+			geodesic="true"
+			stroke-color="#0000FF"
+			stroke-opacity="1.0"
+			stroke-weight="2">
+	</shape> 
+	
+		
+
+		
+	<div class="left_block pageLeftContent">
+			<div class="content">
+			<div class="top_block info">
+					<div class="content">
+					<div style="block">
+					<a id="closeButton" class="close" title="Close"></a>	
+					</div>
+
+			<div class="saprInfo">	
+	
+			<table class="saprInfoGrid">
+				<tbody>
+				<tr >					
+					<td align="left"   >
+						
+					  <img src="{{photoSaprUrl}}{{sapr.idSAPR}}.png" alt="" height="150px" width="150px">
+					</td>
+					<td colspan="2">
+					<table>
+					  <tr >
+						<td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>Manufacturer</b><br>
+					  <span >{{sapr.costruttore}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left"  colspan="3"style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>Type</b><br>
+					  <span > {{sapr.tipo}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>APR Number</b><br>
+					  <span > {{sapr.nunCostruzioneApr}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;border-bottom: none;"  >
+					  <b>Configuration</b><br>
+					  <span >{{sapr.configurazione}} </span>
+					  </td>
+					  </tr>
+					 </table>
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+					  <b>Heading</b><br>
+					  <span > {{sapr.trackAngle}} deg</span>
+					</td>
+					<td>
+					  <b>Ground Speed</b><br>
+					  <span > {{sapr.groundSpeed}} m/s </span>
+					</td>
+					<td>
+					  <b>MTOW</b><br>
+					  <span > {{sapr.MTOW}} kg</span>
+					</td>
+				  </tr>
+				  <tr>
+				 <tr>
+					<td>
+					  <b>Altitude</b><br>
+					  <span >{{sapr.alt}} m</span>
+					</td>
+					<td>
+					  <b>Latitude</b><br>
+					  <span >{{sapr.lat}} deg</span>
+					</td>
+					<td>
+					  <b>Longitude</b><br>
+					  <span >{{sapr.lng}} deg</span>
+					</td>
+				  </tr>				  
+				</tbody>
+			  </table>
+			</div>
+			
+			<div class="picInfo">	
+				<table class="saprInfoGrid">
+				<tbody>
+				<tr >					
+					<td align="left"   >
+						<img src="{{photoOperatorUrl}}{{sapr.idOperatore}}.jpg" alt="" height="150px" width="150px">
+					</td>
+					<td colspan="2">
+					<table>
+					  <tr >
+						<td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>Operator</b><br>
+					  <span >{{sapr.nomeOperatore}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left"  colspan="3"style="border-left: none;border-right: none;border-top: none;"  >
+					  <b>Address</b><br>
+					  <span > {{sapr.indirizzo}}</span>
+					  </td>
+					  </tr>
+					  <tr >
+					  <td align="left" colspan="3" style="border-left: none;border-right: none;border-top: none;border-bottom: none;"  >
+					  <b>Phone</b><br>
+					  <span > {{sapr.telefono}}</span>
+					  </td>
+					  </tr>					  
+					 </table>
+					</td>
+				  </tr>
+				<tr>
+				<tr>				
+					<td>
+					  <b>Pilot Name</b><br>					  
+					</td>					
+					<td>
+					  <b>Phone Number</b><br>
+					</td>
+				</tr>
+				<tr  ng-repeat="pilot in pilotList">
+					<td>
+					{{pilot.nome}} {{pilot.cognome}}					  
+					</td>					
+					<td>
+					  {{pilot.telefono}}	
+					</td>
+				</tr>
+				
+				</tbody>
+			  </table>
+			
+			
+			  </div>
+					</div>
+				</div>
+			</div>
+			
+		</div> 
+		<kml-layer url="http://mdvlab.altervista.org/enac_v3/tracker/kml/class_c.kml"> 
+		</kml-layer>	
+		<kml-layer url="http://mdvlab.altervista.org/enac_v3/tracker/kml/class_f.kml"> 
+		</kml-layer>		
+	</ng-map>
+	
+</body>
+
+</html>
