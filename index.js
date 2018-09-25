@@ -1,11 +1,8 @@
-var express = require("express");
-var app = express();
-const path = require('path');
-app.use(express.static(path.join(__dirname,'tracker')));
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
 
-
-/*Start the Server*/
-
-app.listen(3000,function(){
-console.log("It's Started on PORT 3000");
-});
+express()
+  .use(express.static(path.join(__dirname, 'tracker')))
+  .get('/', (req, res) => res.render('tracker/index_v05'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
